@@ -1,0 +1,31 @@
+@utility section {
+  @apply px-40 max-md:px-20;
+}
+
+@utility container {
+  @apply mx-auto w-full max-w-1360;
+}
+
+@utility visually-hidden {
+  @apply absolute -m-1 size-1 overflow-hidden border-0 p-0 whitespace-nowrap [clip-path:inset(0_0_0_0)];
+}
+
+@utility hidden-from-tablet {
+  @apply sm:hidden;
+}
+
+@utility hidden-desktop-only {
+  @apply md:hidden;
+}
+
+@utility hidden-tablet-only {
+  @apply sm:max-md:hidden;
+}
+
+@utility hidden-mobile-only {
+  @apply max-sm:hidden;
+}
+
+@utility hidden-mobile-tablet {
+  @apply max-md:hidden;
+}

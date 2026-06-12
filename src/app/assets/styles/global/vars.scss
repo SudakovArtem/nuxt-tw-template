@@ -1,0 +1,22 @@
+$page-width: 1360px;
+$page-padding: 40px;
+$page-padding-mobile: 20px;
+$fz-html: 10px;
+$fz-default: 1.6rem;
+$vp-1440: 1440px;
+$vp-1024: 1024px;
+$vp-768: 768px;
+$vp-375: 375px;
+
+:root {
+  --font-size-html: 10px;
+  --font-size-body: 1.6rem;
+  --container-width: 136rem;
+  --container-width-full: 144rem;
+  --color-example-surface: #fff;
+  --color-example-accent: #2563eb;
+  --scrollbar: 0;
+  --scrollbar-width: 0.6rem;
+  --scrollbar-height: 0.6rem;
+  --scrollbar-border-radius: 999px;
+}

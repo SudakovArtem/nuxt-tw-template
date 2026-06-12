@@ -1,0 +1,33 @@
+# Nuxt dev/build outputs
+.output
+.data
+.nuxt
+.nitro
+.cache
+dist
+
+# Node dependencies
+node_modules
+.pnpm-store
+.yarn/install-state.gz
+
+# Logs
+logs
+*.log
+
+# Misc
+.DS_Store
+.fleet
+.idea
+.vscode
+
+# Local env files
+.env
+
+# Linters
+.eslintcache
+.stylelintcache
+
+# Tools
+.playwright-mcp
+.claude

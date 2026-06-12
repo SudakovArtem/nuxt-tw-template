@@ -1,0 +1,89 @@
+@import 'swiper/css';
+@import 'swiper/css/effect-fade';
+@import 'swiper/css/navigation';
+@import 'swiper/css/pagination';
+@import './global/vars';
+@import './global/mixins';
+@import './modules/fonts';
+
+@function size-html($viewport, $koeff: 1) {
+  @return calc($fz-html / $viewport) * 100vw * $koeff;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100svh;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: $fz-html;
+  font-style: normal;
+  font-weight: 400;
+  color: var(--color-foreground);
+  background: var(--color-background);
+  text-rendering: optimizelegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  @media screen and (min-width: $vp-1024) and (max-width: ($vp-1440 - 1px)) {
+    font-size: size-html($vp-1440);
+  }
+
+  @media screen and (min-width: $vp-768) and (max-width: ($vp-1024 - 1px)) {
+    font-size: size-html($vp-768);
+  }
+
+  @media screen and (max-width: ($vp-768 - 1px)) {
+    font-size: size-html($vp-375);
+  }
+}
+
+body {
+  width: 100%;
+  min-width: 320px;
+  min-height: 100%;
+  font-family: var(--font-sans);
+  font-size: $fz-default;
+  color: var(--color-foreground);
+  background: var(--color-background);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  color: inherit;
+  background: transparent;
+  border: 0;
+}
+
+::selection {
+  color: var(--color-primary-foreground);
+  background: var(--color-primary);
+}
+
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}

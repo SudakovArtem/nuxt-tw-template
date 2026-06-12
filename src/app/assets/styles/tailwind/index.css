@@ -1,0 +1,92 @@
+@import 'tailwindcss';
+@import './utils.css';
+
+@plugin 'tailwindcss-animate';
+
+@theme {
+  /* ============================================================
+     SPACING — 1 unit = 0.1rem = 1px (at html font-size: 10px)
+     p-10 = 1rem = 10px,  p-40 = 4rem = 40px
+     ============================================================ */
+  --spacing: 0.1rem;
+
+  /* ============================================================
+     BREAKPOINTS — replace Tailwind defaults
+     ============================================================ */
+  --breakpoint-sm: 768px;
+  --breakpoint-md: 1024px;
+  --breakpoint-lg: 1440px;
+  --breakpoint-xl: initial;
+  --breakpoint-2xl: initial;
+
+  /* ============================================================
+     FONT FAMILIES
+     ============================================================ */
+  --font-sans: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-mono:
+    'SFMono-Regular', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+  --color-background: oklch(100% 0 0deg);
+  --color-foreground: oklch(21% 0.034 264.665deg);
+  --color-card: oklch(100% 0 0deg);
+  --color-card-foreground: oklch(21% 0.034 264.665deg);
+  --color-popover: oklch(100% 0 0deg);
+  --color-popover-foreground: oklch(21% 0.034 264.665deg);
+  --color-primary: oklch(62.3% 0.214 259.815deg);
+  --color-primary-foreground: oklch(100% 0 0deg);
+  --color-muted: oklch(96.8% 0.007 247.896deg);
+  --color-muted-foreground: oklch(55.1% 0.023 264.364deg);
+  --color-border: oklch(92.8% 0.006 264.531deg);
+  --color-input: oklch(92.8% 0.006 264.531deg);
+  --color-ring: oklch(62.3% 0.214 259.815deg);
+
+  /* ============================================================
+     BORDER RADIUS
+     ============================================================ */
+  --radius: 0.8rem;
+  --radius-none: 0px;
+  --radius-sm: 0.2rem;
+  --radius-md: 1rem;
+  --radius-lg: 1.4rem;
+  --radius-full: 999px;
+  --radius-circle: 50%;
+
+  /* ============================================================
+     TRANSITIONS
+     ============================================================ */
+  --transition-timing-function: ease;
+  --default-transition-timing-function: ease;
+  --default-transition-duration: 300ms;
+  --transition-duration: 300ms;
+
+  /* ============================================================
+     ANIMATIONS
+     ============================================================ */
+  --animate-accordion-down: accordion-down 0.2s ease-out;
+  --animate-accordion-up: accordion-up 0.2s ease-out;
+}
+
+.dark {
+  --color-background: oklch(21% 0.034 264.665deg);
+  --color-foreground: oklch(98.5% 0.002 247.839deg);
+  --color-card: oklch(27.8% 0.033 256.848deg);
+  --color-card-foreground: oklch(98.5% 0.002 247.839deg);
+  --color-popover: oklch(27.8% 0.033 256.848deg);
+  --color-popover-foreground: oklch(98.5% 0.002 247.839deg);
+  --color-primary: oklch(70.7% 0.165 254.624deg);
+  --color-primary-foreground: oklch(21% 0.034 264.665deg);
+  --color-muted: oklch(30.1% 0.03 256.802deg);
+  --color-muted-foreground: oklch(70.7% 0.022 261.325deg);
+  --color-border: oklch(37.3% 0.034 259.733deg);
+  --color-input: oklch(37.3% 0.034 259.733deg);
+  --color-ring: oklch(70.7% 0.165 254.624deg);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}

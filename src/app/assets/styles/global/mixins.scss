@@ -1,0 +1,40 @@
+@mixin page-container {
+  width: min(100% - #{$page-padding-mobile * 2}, $page-width);
+  margin-inline: auto;
+}
+
+@mixin mobile {
+  @media screen and (width < #{$vp-768}) {
+    @content;
+  }
+}
+
+@mixin mobile-tablet {
+  @media screen and (width < #{$vp-1024}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (width >= #{$vp-768}) and (width < #{$vp-1024}) {
+    @content;
+  }
+}
+
+@mixin tablet-desktop {
+  @media screen and (width >= #{$vp-768}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (width >= #{$vp-1024}) {
+    @content;
+  }
+}
+
+@mixin hover {
+  @media (hover: hover) and (pointer: fine) {
+    @content;
+  }
+}
